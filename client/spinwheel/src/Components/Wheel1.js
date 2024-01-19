@@ -72,7 +72,6 @@ const Wheel1 = () => {
         // Randomize the final angle here
         const randomFactor = Math.random(); // Random factor between 0 and 1
         const totalDegrees = 360; // Total degrees in a circle
-        console.log("randomFactor",randomFactor);
         return (randomFactor * totalDegrees) % totalDegrees;
     };
     const calculateWinnerId = (angle) => {
@@ -85,14 +84,14 @@ const Wheel1 = () => {
             }
             currentAngle = playerAngle;
         }
-        return null; // No winner found (should not happen in normal circumstances)
+        return null; 
     };
     const determineWinner = (angle) => {
         // Logic to determine the winner based on angle
         const winnerId = calculateWinnerId(angle);
         if (winnerId) {
             const winner = players[winnerId];
-            const winningAmount = totalPot; // Or calculate based on bet proportion
+            const winningAmount = totalPot; 
             setWinnerInfo({ winnerName: winner.name, amount: winningAmount });
             setShowModal(true);
         }
@@ -102,7 +101,6 @@ const Wheel1 = () => {
     }
     const spinWheel = () => {
         if (countdown === 0) {
-            console.log("HEY");
             setIsSpinning(true);
             const spinDuration = 10000; // Duration of the spin in milliseconds
             const newAngle = calculateFinalAngle(); // Calculate the final angle
@@ -118,26 +116,6 @@ const Wheel1 = () => {
       useEffect(() => {
         spinWheel();
     }, [countdown]);
-    // // Trigger spinning when countdown reaches zero
-    // useEffect(() => {
-    //     if(countdown === 0){
-    //         setIsSpinning(true);
-    //         setTimeout(() => {
-    //             setIsSpinning(false);
-    //         }, 10000);
-    //     }
-    // }, [countdown]);
-
-    // useEffect(() => {
-    //     if (countdown === 0) {
-    //         setIsSpinning(true);
-    //         setTimeout(() => {
-    //             setIsSpinning(false);
-    //             // Notify the server that the spin has finished
-    //             socketService.emit('spinFinished');
-    //         }, 10000); // Adjust duration according to your spin animation time
-    //     }
-    // }, [countdown]);
 
     // Generate the SVG paths for each player
     let startAngle = 0;

@@ -15,58 +15,6 @@ const useGameState = () => {
         localStorage.setItem('gameState', JSON.stringify(gameState));
     }, [gameState]);
 
-    // useEffect(() => {
-    //     const playerCount = Object.keys(gameState.players).length;
-    //     if(playerCount>=2 && !isTimerActive){
-    //         setIsTimerActive(true);
-    //         setCountdown(30); //Start with a fresh 30 seconds
-    //     }
-    // }, [gameState.players, isTimerActive]);
-
-    // //Countdown logic
-    // useEffect(() => {
-    //     let interval; 
-    //     if(isTimerActive){
-    //         interval = setInterval(() => {
-    //             setCountdown((prevCountdown) => {
-    //                 if(prevCountdown > 0){
-    //                     return prevCountdown - 1;
-    //                 } else {
-    //                     clearInterval(interval);
-    //                     setIsTimerActive(false) //Stop the timer
-    //                     return 0;
-    //                 }
-    //             });
-    //         }, 1000);
-    //     }
-    //     return () => clearInterval(interval);
-    // }, [isTimerActive]);
-
-    // // Logic to extend the countdown when a new bet is placed
-    // useEffect(() => {
-    //     const extendCountdown = () => {
-    //         if (countdown <= 5 && countdown > 0) {
-    //             setCountdown((prevCountdown) => Math.min(prevCountdown + 7, 30));
-    //         }
-    //     };
-    //     console.log("Countdown updated:", countdown);
-
-    //     socketService.on('betPlaced', extendCountdown);
-
-    //     return() => {
-    //         socketService.off('betPlaced', extendCountdown);
-    //     };
-    // }, [countdown]);
-
-    // useEffect(() => {
-    //     socketService.connect((updatedGameState) => {
-    //         setGameState(updatedGameState);
-    //         console.log("Game state updated:", updatedGameState); // Log the updated game state
-    //     });
-    //     return () => {
-    //         socketService.disconnect();
-    //         };
-    //     }, []);
     useEffect(() => {
         // Function to handle game state updates
         const handleGameUpdate = (updatedGameState) => {

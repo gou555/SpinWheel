@@ -21,12 +21,13 @@ const io = new Server(server, {
 })
 
 const activePlayers = new Set();
+
 //Game state structure 
 let gameState = {
     totalPot: 0,
     players: {} //Key: Player ID, Value: Bet Amount
 }
-const SYNC_INTERVAL = 5000; // Sync every 5 seconds, for example
+const SYNC_INTERVAL = 5000; // Sync every 5 seconds, for countdown
 
 let countdown = 30;
 let countdownActive = false;

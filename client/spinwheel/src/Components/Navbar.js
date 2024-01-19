@@ -11,7 +11,7 @@ const AppNavbar = () => {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
                     {/* <Nav.Link href="#spinWheel" className="nav-link-space me-2">$HUFFLE</Nav.Link> */}
-                    {/* Add more Nav.Link here for other games in the future */}
+                    {/* More Link, More PVP game in the future */}
                 </Nav>
                 <div className="navbar-images">
                     <img src={discord} alt="First Image" className="navbar-image" />
