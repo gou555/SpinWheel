@@ -1,0 +1,81 @@
+.space-gradient-background {
+  /* Horizontal gradient from dark grey to black */
+  background: linear-gradient(to right, #2b2b2b, #1a1a1a);
+  min-height: 100vh; /* Full height of the viewport */
+  color: white; /* Text color for contrast */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keep the background fixed during scroll */
+}
+
+p{
+  font-family: SpaceFont;
+  letter-spacing: 7px;
+  font-size: 40px;
+}
+
+.main-content {
+  text-align: center; /* Center text */
+  padding: 30px; /* Adjust this value as needed for spacing */
+}
+
+.header-container {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center children horizontally */
+  align-items: center; /* Center children vertically */
+  flex-wrap: wrap; /* Allow items to wrap onto new lines as needed */
+  margin-bottom: 30px; /* Adjust this value as needed for spacing below the Wheel */
+}
+
+.header-image {
+  height: 100px; /* Adjust the height as needed */
+}
+
+.wheel-container {
+  margin-bottom: 50px; /* Adjust this value as needed for spacing below the Wheel */
+}
+
+.footer {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+}
+
+.footer img {
+  height: 500px;
+}
+
+.social-link {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.social {
+  width: auto; /* Adjust the size as needed */
+  height: 50px;
+}
+
+/* Responsive sizing */
+@media (min-width: 600px) {
+  .footer img {
+    height: 240px;
+    border-radius: 10px;
+  }
+  .header-image {
+    height: 100px; /* Adjust the height as needed */
+  }
+}
+
+@media (max-width: 599px) {
+  .footer img {
+    height: 130px;
+    border-radius: 10px;
+  }
+  .header-image {
+    height: 70px; /* Adjust the height as needed */
+  }
+  p{
+    font-size: 20px;
+  }
+  
+}

@@ -1,0 +1,64 @@
+/* Subtle button styling */
+.electric-button {
+    color: #fff;
+    background-color: #020fc1;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    width: 150px;
+    height: 45px;
+    text-shadow: #fff 0px 0px 5px;
+    box-shadow: rgb(95, 240, 208, 15%)  0px 0px 50px;
+    font-family: SpaceFont;
+    font-size: 30px;
+}
+
+.electric-button:hover {
+    color: #020fc1;
+    background-color: #fff;;
+    cursor: pointer;
+    box-shadow: #fff 0px 0px 10px;
+}
+.navbar-images {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Adjust spacing as needed */
+}
+.navbar-image {
+    width: 60px; /* Adjust the size as needed */
+    height: auto;
+    margin-left: 10px; /* Space between the images */
+}
+
+/* Space theme for the navbar */
+.space-navbar {
+    /*background-color: #0b3d91; /* Deep Space Blue */
+    background-color: #000428;
+    border-bottom: 2px solid #020fc1; /* Nebula Pink border */
+}
+/* Styling for the navbar brand */
+.nav-brand {
+    font-family: SpaceFont;
+    letter-spacing: 5px;
+}
+/* Styling for the navbar links */
+.nav-link-space {
+    color: #0011ff !important; /* Nebula Pink links */
+    font-family: SpaceFont;
+    letter-spacing: 3px;
+}
+
+@font-face {
+    font-family: SpaceFont;
+    src: url(../Font/SpaceObsessed.otf);
+  }
+
+
+  @font-face {
+    font-family: Retro;
+    src: url(../Font/RetroGaming.ttf);
+  }
+
+  @font-face {
+    font-family: Arcade;
+    src: url(../Font/ARCADE.TTF);
+  }

@@ -1,0 +1,58 @@
+/* Subtle button styling */
+.bet-button {
+    color: #fff;
+    background-color: #020fc1;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    width: 150px;
+    text-shadow: #fff 0px 0px 0px;
+    box-shadow: rgb(95, 240, 208, 15%)  0px 0px 50px;
+    font-family: SpaceFont;
+    font-size: 30px;
+    margin: 0;
+
+}
+
+.bet-button:hover {
+    color: #020fc1;
+    background-color: #fff;;
+    cursor: pointer;
+    box-shadow: #fff 0px 0px 10px;
+}
+
+.bet-input {
+    color: #fff;
+    background-color: #020fc1;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    width: 200px;
+    margin: 0;
+    font-family: SpaceFont;
+    font-size: 20px; /* Adjust font size as needed */
+    text-align: center;
+}
+.bet-input::placeholder {
+    color: #fff;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number]{
+    -moz-appearance: textfield;
+}
+.bet-button, .bet-input {
+    height: 45px;
+
+}
+.bet-input-container {
+    display: flex;
+    align-items: center; /* Centers items vertically in the container */
+    justify-content: center; /* Centers items horizontally in the container */
+    gap: 10px; /* Optional: adds space between children */
+}
+
+
+

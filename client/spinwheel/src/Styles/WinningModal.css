@@ -1,0 +1,51 @@
+.winning-modal {
+    background: #fff3e0;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.winning-modal h2 {
+    color: #ff9800;
+    font-family: 'Dancing Script', cursive; /* A festive font */
+}
+
+.winning-modal p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.twitter-share-button,
+.close-button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.twitter-share-button:hover {
+    background: #45a049;
+}
+
+.close-button {
+    background: #f44336;
+}
+
+.close-button:hover {
+    background: #d32f2f;
+}
+
+.winning-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+}

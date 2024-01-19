@@ -1,0 +1,62 @@
+.wheel{
+    display: block;
+    margin: 0 auto; /* Center the wheel */
+    border-radius: 50%; /* Circular wheel */
+    box-shadow: 0 0 20px 5px #fff; /* Soft glow like distant stars */
+    overflow: hidden; /* Ensure nothing spills out of the wheel's bounds */
+    font-family: ARCADE;
+    text-shadow:1px 1px 3px #fff, 1px 1px 3px #020fc1;
+    letter-spacing: 2px;
+}
+
+.wheel-container {
+  position: relative;
+  /* Ensure the wheel container is large enough to include the arrow above */
+  padding-top: 50px; /* Adjust this value as needed to accommodate the arrow */
+  display: inline-block;
+}
+
+.wheel-arrow-container {
+  position: absolute;
+  transform-origin: center; /* Keeps the rotation centered */
+}
+
+.wheel-arrow {
+  display: block; /* Use block to enable width and height */
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent; /* Left side of arrow */
+  border-right: 20px solid transparent; /* Right side of arrow */
+  border-bottom: 40px solid red; /* Color of the arrow and creates the triangle */
+}
+
+/* Responsive sizing */
+@media (min-width: 600px) {
+    .wheel {
+      width: 90vw;
+      height: 90vw;
+      max-width: 500px; /* Cap the size for very large screens */
+      max-height: 500px;
+    }
+}
+
+@media (max-width: 599px) {
+    .wheel {
+      width: 80vw;
+      height: 80vw;
+    }
+  }
+
+/*Spinning animation*/
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(3080deg);
+    }
+  }
+
+.wheel-spinning {
+    animation: spin 10s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
